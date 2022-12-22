@@ -1,0 +1,9 @@
+#!ipxe
+
+iseq ${platform} efi && goto is_efi ||
+
+chain http://{{ bootserver }}/media/{{ vchassc.vcenterHost.name }}/undionly.kpxe.vmw-hardwired
+
+:is_efi
+chain http://{{ bootserver }}/media/{{ vchassc.vcenterHost.name }}/snponly64.efi.vmw-hardwired
+
