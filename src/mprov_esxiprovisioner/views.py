@@ -23,7 +23,7 @@ class ESXiIPXEAPIView(MProvView):
             ip = request.META.get('REMOTE_ADDR')
         # now try to grab the nic for this IP
         queryset = self.model.objects.all()
-        ip="172.16.60.1"
+        #ip="172.16.60.1"
         queryset = queryset.filter(ipaddress=ip)
         if queryset.count() == 0:
           # return None to allow the rest of the system to process the requst.
