@@ -1,4 +1,10 @@
-# mprov_esxiprovision
+# mprov_esxiprovisioner
+![Build Status](https://img.shields.io/github/actions/workflow/status/mprov-ng/mprov_esxiprovision/ci_build.yml?style=plastic)
+![Latest Version](https://img.shields.io/pypi/v/mprov_esxiprovisioner.svg)
+![Supported Python](https://img.shields.io/pypi/pyversions/mprov_esxiprovisioner.svg)
+![Wheel Status](https://img.shields.io/pypi/wheel/mprov_esxiprovisioner.svg)
+![License](https://img.shields.io/pypi/l/mprov_esxiprovisioner.svg)
+
 This is an mPCC python module add-on that will allow the mPCC to provision ESXi vm server hosts.
 
 
