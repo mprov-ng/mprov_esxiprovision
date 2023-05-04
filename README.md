@@ -18,7 +18,7 @@ To install this module you need to activate your mPCC python env:
 
 Then you need to install the pip package for this module.
 ```
-# pip install mprov_esxiproviioner
+# pip install mprov_esxiprovisioner
 ```
 
 Once that is installed, you need to add a couple of things to your `/var/www/mprov_control_center/mprov_control_center/settings.py` file.  
@@ -27,4 +27,8 @@ First, look for the `INSTALLED_APPS` array and add `mprov_esxiprovisioner` to th
 
 Second, look for the `MIDDLEWARE` array and add `mprov_esxiprovisioner.middleware.ESXiProvisionerMiddleware` to the beginning of that array.
 
-Lastly, exit your editor and run `touch /var/www/mprov_control_center/mprov_control_center/wsgi.py` to "restart" the wsgi application.
+Next, exit your editor and run `touch /var/www/mprov_control_center/mprov_control_center/wsgi.py` to "restart" the wsgi application.
+
+At the command prompt, run `python /var/www/mprov_control_center/manage.py makemigrations mprov_esxiprovisioner` to create the necessary migrations for the plugin.
+
+Once that completes, run `python /var/www/mprov_control_center/manage.py migrate` to create the tables.
