@@ -39,7 +39,11 @@ class ESXiIPXEAPIView(MProvView):
             context = {
                 'vchassc':  system.vchassociation_set.all()[0] ,
                 'bootserver': platform.node()
-            }            
+            }
+            if request.get_full_path().startswith("/tramp"):
+                print(f"Serving VMWare Tramp to {ip}")
+                return(HttpResponse(f"#!ipxe\nchain http://{ context['bootserver'] }/media/{ context['vchassc'].vcenterHost.name }/tramp", content_type="text/plain"))
+                        
             print(f"Serving ESXi PXE to {ip}")
             return(TemplateResponse(request, "systems/ipxe", context=context, content_type="text/plain" ))
             
