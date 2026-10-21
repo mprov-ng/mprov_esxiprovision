@@ -5,6 +5,8 @@
 ![Wheel Status](https://img.shields.io/pypi/wheel/mprov_esxiprovisioner.svg)
 ![License](https://img.shields.io/pypi/l/mprov_esxiprovisioner.svg)
 
+This mPCC add-on is being archived.  If anyone wants to take over development, please contact me.
+
 This is an mPCC python module add-on that will allow the mPCC to provision ESXi vm server hosts.
 
 
